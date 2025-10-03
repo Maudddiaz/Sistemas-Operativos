@@ -2,9 +2,9 @@ Contador_P = 0 #contador de programa segun el diagrama de flujo
 
 
 class Proceso:#defino por asi decirlo el registro de proceso como en pseudocodigo
-    def __init__(self, tamaño, tiempo):
+    def __init__(self, tamaño, tiempo_estimado):
         self.tamaño = tamaño
-        self.tiempo = tiempo
+        self.tiempo_estimado = tiempoestimado
 
 class Memoriaparticion:
     def __init__(self,tamañooriginal,tamañoactual,estado):
@@ -12,8 +12,8 @@ class Memoriaparticion:
         self.tamañoactual   = tamañoactual
         self.estado = estado # estado ocupado o desacupado son 
 
-memoria =[]
-nuevo = []#no ocupa memoria
+memoria = []
+nuevo = []#no ocupa memoria  ARCHIVO DE ENTRADA CSV
 listo = []# habrian 2 aqui y el 3ero supongo que estaria en ejecucion
 l_s = []# no ocupa memoria los listos suspendidos
 ejecucion = []#no se cuantos procesos se pueden tener en ejecucion a la vez esto queda hablarlo
@@ -33,8 +33,10 @@ for particiones in reversed(memoria): #el reversed basicamente lo que hace es re
         if nuevo[1].tamaño <= memoria.tamañooriginal[particiones]:#nuevo[1].tamaño es el primer Proceso en la cola   y lo tomo para agarrar la primera referencia
             memoria.tamañoactual[particiones] = memoria.tamañoactual[particiones] - nuevo[1].tamaño
             listo.append(nuevo[1])
+            nuevo.del[0]#la posicion 2 pasa a ser el primero
             break#basicamente me sale del ciclo for
     
-if Contador_P <> 10 # nose como seguir :v
-    
-    
+if Contador_P <> 10 # nose como seguir :v osea si pero no
+     
+
+#prueba git
